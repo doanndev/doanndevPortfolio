@@ -21,12 +21,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <AsciiCorner position="bl" hovered={isHovered} />
       <AsciiCorner position="br" hovered={isHovered} />
 
-      <div 
-        className="bg-cover bg-center rounded mb-4 aspect-video border border-terminal-border relative overflow-hidden"
-        style={{ 
-          backgroundImage: `linear-gradient(0deg, rgba(6, 249, 87, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%), url("${project.image}")` 
-        }}
-      >
+      <div className="relative rounded mb-4 aspect-video border border-terminal-border overflow-hidden">
+        <img 
+          src={project.image} 
+          alt={`${project.name} project screenshot`}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-black/60" />
         <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 

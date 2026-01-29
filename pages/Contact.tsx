@@ -49,9 +49,9 @@ const Contact: React.FC = () => {
             <div className="text-white/40 text-[10px] uppercase tracking-widest font-bold">-- available_protocols</div>
             <div className="grid grid-cols-1 gap-4">
               {[
-                { label: 'EMAIL', value: 'hello@terminal.dev', icon: 'alternate_email' },
-                { label: 'GITHUB', value: 'github.com/terminal-dev', icon: 'hub' },
-                { label: 'LINKEDIN', value: 'linkedin.com/in/dev', icon: 'person' },
+                { label: 'EMAIL', value: 'doanndev@gmail.com', icon: 'alternate_email' },
+                { label: 'GITHUB', value: 'github.com/doanndev', icon: 'hub' },
+                { label: 'LINKEDIN', value: 'linkedin.com/in/doanndev', icon: 'person' },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4 bg-terminal-card border border-terminal-border p-3 rounded group hover:border-primary/40 transition-colors">
                   <span className="material-symbols-outlined text-primary text-xl">{item.icon}</span>

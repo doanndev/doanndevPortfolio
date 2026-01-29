@@ -7,7 +7,7 @@ export const PROJECTS_DATA: Project[] = [
     description:
       "Developed backend services and smart contracts for real-time gameplay, P2P trading, and asset swap modules.",
     techStack: ["NestJS", "WebSocket", "PostgreSQL", "Redis", "JWT", "Anchor"],
-    image: "/public/imgs/goldengame.png",
+    image: "/imgs/goldengame.png",
     githubUrl: "https://github.com/doanndev/golden-game",
     demoUrl: "/projects/golden-game",
     metadata: {
@@ -21,7 +21,7 @@ export const PROJECTS_DATA: Project[] = [
     description:
       "Built a desktop automation system handling YouTube interactions, proxy integration, and secure authentication.",
     techStack: ["Django", "Electron", "PostgreSQL"],
-    image: "/public/imgs/youtubetool.png",
+    image: "/imgs/youtubetool.png",
     demoUrl: "/projects/youtube-automation",
     githubUrl: "https://github.com/doanndev/youtube-automation",
     metadata: {
@@ -35,7 +35,7 @@ export const PROJECTS_DATA: Project[] = [
     description:
       "Implemented backend services and smart contracts for token creation, real-time trading, and bonding curve logic.",
     techStack: ["NestJS", "WebSocket", "PostgreSQL", "Anchor"],
-    image: "/public/imgs/memepump.png",
+    image: "/imgs/memepump.png",
     githubUrl: "https://github.com/doanndev/memepump-launchpad",
     demoUrl: "/projects/memepump-launchpad",
     // docsUrl: 'https://docs.memepump.io',
