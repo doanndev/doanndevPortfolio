@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terminal Dev Portfolio</title>
+  <!-- Site logo / favicon (use Gemini.png in public/) -->
+  <link rel="icon" href="public/imgs/Gemini.png" />
+  <link rel="shortcut icon" href="public/imgs/Gemini.png" />
+  <link rel="apple-touch-icon" href="public/imgs/Gemini.png" />
+  <meta name="theme-color" content="#06f957" />
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Terminal Dev Portfolio" />
+  <meta property="og:image" content="public/imgs/Gemini.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="public/imgs/Gemini.png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#06f957",
+              "background-light": "#f5f8f6",
+              "background-dark": "#0f2316",
+              "syntax-key": "#bd93f9",
+              "syntax-string": "#f1fa8c",
+              "terminal-header": "#1a3a25",
+              "terminal-card": "#142d1d",
+              "terminal-border": "#214a2f",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "monospace"]
+            },
+            animation: {
+              'blink': 'blink 1s step-end infinite',
+            },
+            keyframes: {
+              blink: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #102316;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #214a2f;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #06f957;
+      }
+      body {
+        margin: 0;
+        background-color: #0f2316;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
