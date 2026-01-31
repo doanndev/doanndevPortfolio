@@ -1,102 +1,85 @@
 <div align="center">
-<img width="1200" height="675" alt="Terminal Portfolio Screenshot" src="./public/imgs/screenshot.png" />
+	<img src="/screenshot.png" alt="Terminal Dev Portfolio screenshot" width="1200" />
 </div>
 
 # Terminal Dev Portfolio
 
-A modern, terminal-inspired developer portfolio built with React, TypeScript, and Tailwind CSS. Features a unique boot sequence animation, responsive design, and a sleek cyberpunk aesthetic.
+>A terminal-inspired developer portfolio with a boot-style typing animation, cyber-terminal theme, and clean responsive layout.
 
-## ✨ Features
+This repo contains a minimal, production-ready frontend built with React, TypeScript, Tailwind CSS and Vite. It showcases projects and experience in a terminal-like UI designed for engineers.
 
-- **🚀 Boot Animation**: Terminal-style typing animation on page load
-- **💻 Terminal UI**: Authentic terminal look with command prompts and system info
-- **📱 Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- **🎨 Cyberpunk Theme**: Dark mode with green accent colors and retro vibes
-- **⚡ Fast Performance**: Built with Vite for lightning-fast development and builds
-- **🎯 Modern Stack**: React 19, TypeScript, Tailwind CSS, React Router
+## Demo Screenshot
 
-## 🛠️ Tech Stack
+The screenshot above is referenced from `/screenshot.png` in the public folder — place your exported screenshot there and it will render in this README.
 
-- **Frontend**: React 19, TypeScript
-- **Styling**: Tailwind CSS, Custom CSS animations
-- **Routing**: React Router DOM
-- **Build Tool**: Vite
-- **UI Components**: Custom terminal components, shadcn/ui Progress
-- **Icons**: Material Symbols
-- **Fonts**: Space Grotesk
+## Features
 
-## 🚀 Getting Started
+- Terminal-style boot animation with typed commands
+- Staged reveal of UI sections (boot / banner / cards)
+- Terminal aesthetic: blinking cursor, monospace UI, system stats
+- Responsive layout with project cards and experience list
+- Reusable components and small hook for boot sequence
 
-**Prerequisites:** Node.js 18+
+## Tech Stack
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/doanndev/terminal-dev-portfolio.git
-   cd terminal-dev-portfolio
-   ```
+- React 19 + TypeScript
+- Tailwind CSS (v4) + Tailwind plugins
+- Vite (dev server & build)
+- React Router for client-side routing
+- shadcn UI small components (progress)
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+## Quickstart (local)
 
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
+1. Install dependencies
 
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
-
-## 📁 Project Structure
-
-```
-├── components/           # Reusable UI components
-│   ├── ui/              # shadcn/ui components
-│   ├── TerminalLayout.tsx
-│   ├── ProjectCard.tsx
-│   └── ExperienceItem.tsx
-├── pages/               # Route pages
-│   ├── Home.tsx
-│   ├── Projects.tsx
-│   ├── Experience.tsx
-│   └── Contact.tsx
-├── hooks/               # Custom React hooks
-├── services/            # API services (Gemini AI)
-├── constants.tsx        # Data and configuration
-├── types.ts            # TypeScript type definitions
-└── public/             # Static assets
+```bash
+npm install
 ```
 
-## 🎨 Customization
+2. Start the dev server
 
-1. **Update Personal Info**: Edit `constants.tsx` to add your projects and experience
-2. **Modify Colors**: Update the color scheme in `tailwind.config.cjs`
-3. **Add Projects**: Add new entries to `PROJECTS_DATA` in `constants.tsx`
-4. **Update Experience**: Modify `EXPERIENCE_DATA` with your work history
+```bash
+npm run dev
+```
 
-## 🌟 Key Features
+3. Open http://localhost:5173 (or the port Vite reports)
 
-- **Staged Reveal Animation**: Content appears sequentially like a system boot
-- **Terminal Aesthetics**: Authentic terminal styling with blinking cursors
-- **Project Showcase**: Interactive project cards with tech stacks
-- **Experience Timeline**: Professional experience in JSON format
-- **Contact Integration**: Gemini AI-powered contact form
-- **SEO Optimized**: Meta tags, Open Graph, and favicon support
+## Build
 
-## 📱 Pages
+```bash
+npm run build
+npm run preview
+```
 
-- **Home**: Main landing with system status and tech stack
-- **Projects**: Portfolio projects with detailed information
-- **Experience**: Professional experience and skills
-- **Contact**: Get in touch form with AI assistance
+## Project Structure
 
-## 🤝 Contributing
+```
+.
+├── components/         # UI components (TerminalLayout, ProjectCard, etc.)
+├── pages/              # Route pages: Home, Projects, Experience, Contact
+├── hooks/              # Custom hooks (useBootSequence)
+├── public/             # Static assets (images, favicon)
+├── index.html          # App entry (includes inline tailwind config)
+├── index.css           # Tailwind directives + styles
+├── tailwind.config.cjs # Tailwind configuration
+├── postcss.config.cjs  # PostCSS configuration
+└── package.json
+```
 
-Feel free to fork this project and customize it for your own portfolio! If you find bugs or have suggestions, please open an issue.
+## Customize
 
-## 📄 License
+- Replace images in `public/imgs/` or import images into `constants.tsx`.
+- Update `PROJECTS_DATA` and `EXPERIENCE_DATA` in `constants.tsx`.
+- Adjust colors/animation in `tailwind.config.cjs` and `index.css`.
 
-This project is open source and available under the [MIT License](LICENSE).
+## Notes
+
+- The project uses a small module-level flag so the boot animation runs once per full page load (navigating inside the SPA won't replay it). If you'd like the animation to run once per session instead, switch to `sessionStorage` in the hook.
+
+## Contributing
+
+Contributions welcome. Open an issue or submit a PR with improvements or bug fixes.
+
+## License
+
+MIT
